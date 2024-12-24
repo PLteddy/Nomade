@@ -1,0 +1,807 @@
+/* Import de la police */
+@import url('satoshi.css');
+
+/* Réinitialisation */
+body {
+  margin: 0;
+  font-family: 'Satoshi', sans-serif;
+  background-color: #21181B;
+  color: #FAF5D8;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative; /* Nécessaire pour positionner le border */
+  }
+  
+  .header::before { /*ici tu gères la ligne*/
+    content: ""; /* Crée une ligne visuelle */
+    position: absolute;
+    top: 100px;
+    left: 50%; /* Commence au centre */
+    transform: translateX(-50%); /* Centre horizontalement */
+    width: 80%; /* Ajuste la largeur du border */
+    border-bottom: 3px solid #FAF5D8; /* Définit le border */
+  }
+  
+
+.header .logo img {
+  height: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  color: #FAF5D8;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.header a:hover {
+    color :#F2AB36
+}
+
+/* Hero */
+.hero {
+    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+  text-align: center;
+}
+
+.parfum-home img {
+  height: 500px;
+  margin-right: 50px;
+}
+
+.tagline h1 {
+  font-size: 6rem;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: left;
+  padding-left: 20px;
+}
+.follow-me {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 1.25rem;
+    list-style: none; /* Supprime toutes les puces */
+    padding: 0; /* Supprime les espaces par défaut */
+    margin: 0; /* Supprime les marges par défaut */
+    text-align: right;
+    margin-right: 50px;
+    margin-bottom: 25px;
+  }
+  
+  .follow-me li a{
+    list-style: none; /* Assure que chaque élément <li> n'a pas de puce */
+    text-decoration: none;
+    color: #F2AB36;
+  }
+  .follow-me a:hover {
+    color :#FAF5D8
+}
+
+/* Footer */
+.footer {
+  background-color: #F2AB36;
+  padding: 20px 50px;
+  text-align: left;
+  color: #21181B;
+}
+
+.footer .footer-links {
+    display: flex; /* Active le mode flexbox pour les enfants */
+    align-items: center; /* Aligne verticalement les éléments */
+    justify-content: left; /* Centre les éléments horizontalement */
+    font-weight: 900;
+    color: #21181B;
+    font-size: 1.25rem;
+    gap: 5px; /* Ajoute de l'espace entre les éléments */
+  }
+  
+  .footer .footer-links a {
+    color: #21181B;
+    text-decoration: none;
+    font-weight: 900;
+  }
+  
+  .footer .footer-links p {
+    margin: 0; /* Supprime les marges par défaut du paragraphe */
+  }
+  
+.footer-links a:hover {
+    text-decoration: none;
+    color :#FAF5D8
+}
+.footer .disclaimer {
+    font-family: Roboto;
+  font-size: 1reù;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.footer .rights {
+    text-align: right;
+    font-family: Roboto;
+  margin-top: 5px;
+  font-weight: 900;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+
+/* our perfumes */
+
+.see-product {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(92vh - 80px);
+    text-align: center;
+  }
+  .products {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    padding: 50px;
+    background-color: #21181B;
+  }
+  
+  .product {
+    text-align: center;
+  }
+  
+  .product img {
+    width: 200px;
+    height: auto;
+  }
+  
+  .see-more {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 1.25 rem;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #21181B;
+    color: #FAF5D8;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .see-more:hover {
+    background-color: #F2AB36;
+  }
+  
+  .see-more a {
+    text-decoration: none;
+  }
+
+.scrolling-banner {
+  position: relative;
+  overflow: hidden;
+  background-color: #FAF5D8;
+  color: #21181B;
+  font-size: 2rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.scrolling-banner .content {
+  display: flex;
+  align-items: center;
+  animation: scroll 10s linear infinite;
+}
+
+.scrolling-banner span {
+  margin: 0 20px;
+  display: inline-block;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+  .icon {
+    width: 50px; /* Ajuste la taille de l'image */
+    height: 50px; /* Ajuste la hauteur */
+    margin: 0 10px; /* Ajoute de l'espace autour */
+    vertical-align: middle; /* Aligne verticalement avec le texte */
+  }
+  
+/*Blog*/
+
+.article-blog {
+    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+  text-align: center;
+}
+/* Grid container */
+.grid-container {
+  color: #21181B;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+}
+
+/* Card styles */
+.card {
+  background-color: #fdf5e6;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  
+}
+
+.category {
+  font-family: roboto;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #21181B;
+  text-transform: uppercase;
+  border-bottom: 2px solid #000;
+  margin-bottom: 12px;
+}
+
+.photo {
+  height: 120px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px; /* Optionnel : coins arrondis */
+  margin-bottom: 12px;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Permet de remplir le conteneur sans déformer l'image */
+}
+
+.see-more_white {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 1.25 rem;
+  color: #F2AB36;
+  background-color: #FAF5D8;
+  text-decoration: none;
+  font-weight: black;
+  padding: 10px 20px; /* Adjust the padding as needed */
+  border-radius: 20px; /* Adjust the border radius as needed */
+  float: right; /* Move the button to the right */
+}
+
+.see-more_white:hover {
+  background-color: #21181B;
+}
+
+
+/* About-us */
+
+.container_about {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.two-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.text-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.image-column {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.image-placeholder {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  overflow: hidden; /* Assure qu'une image trop grande ne déborde pas */
+}
+
+.image-placeholder img {
+  max-width: 100%; /* Ajuste l'image pour ne pas dépasser la largeur du conteneur */
+  max-height: 100%; /* Ajuste l'image pour ne pas dépasser la hauteur du conteneur */
+  object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le conteneur tout en gardant ses proportions */
+}
+
+
+.values-section {
+  padding: 50px 20px;
+  background-color: #F2AB36;
+  height: calc(100vh - 80px);
+}
+
+.values-section h1 {
+  margin-top: 50px;
+  font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #21181B;
+}
+.value-item h2 {
+  font-family: satoshi;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #21181B;
+}
+
+.value-item p {
+  font-family: roboto;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 250px;
+  color: #21181B;
+  text-align: center;
+}
+
+
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.value-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.value-item img {
+  width: 300px; /* Ajuste la taille des images */
+  height: 250px; /* Assure une taille uniforme */
+  object-fit: cover; /* Ajuste l'image pour remplir l'espace sans déformation */
+  margin-bottom: 20px;
+}
+
+.Ingredients-section {
+  padding: 50px 20px;
+  background-color: #21181B;
+
+}
+
+.Ingredients-section nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.Ingredients-section h1 {
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.Ingredients-section h2 {
+  font-family: roboto;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.Ingredients-section h3 {
+  font-weight: 900;
+  font-size: 1.875rem;
+  text-align: center;
+}
+
+
+.download-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #FAF5D8; /* Couleur de fond douce */
+  margin-top: 50px;
+}
+
+.download-section h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  color: #21181B;
+}
+
+.download-section p {
+  font-family: roboto, sans-serif;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #F2AB36;
+  color: #21181B;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-button:hover {
+  background-color: #d9972c;
+  transform: translateY(-2px);
+}
+
+
+/* Contact_us */
+
+/* Section de contact avec un positionnement relatif et un centrage du texte */
+.contact-section {/* Positionnement relatif pour permettre un positionnement absolu des éléments enfants */
+  text-align: center; /* Centre le texte horizontalement */
+  height: calc(70vh - 80px);
+
+}
+
+/* Titre de la section de contact avec un style de police très grand et en gras */
+.contact-title {
+  font-size: 250px; /* Taille de police très grande */
+  font-weight: bold; /* Texte en gras */
+  color: #FAF5D8; /* Couleur du texte */
+  position: absolute; /* Positionnement absolu pour un placement précis */
+  bottom: 5%; /* Positionné à 5% du bas du conteneur parent */
+  left: 50%; /* Centré horizontalement */
+  transform: translateX(-50%); /* Ajuste la position pour être parfaitement centré */
+}
+
+/* Boîte de contact avec un affichage en flexbox et un espacement entre les éléments */
+.contact-box { 
+  display: flex; /* Utilise flexbox pour la mise en page */
+  justify-content: space-between; /* Espace les éléments enfants de manière égale */
+  background: #F2AB36; /* Couleur de fond */
+  border-radius: 10px; /* Coins arrondis */
+  z-index: 1; /* Assure que cet élément est au-dessus des autres éléments avec un z-index inférieur */
+  position: relative; /* Positionnement relatif pour permettre un positionnement absolu des éléments enfants */
+  height: 410px;
+  max-width: 52rem; /* Largeur maximale de 800px */
+  margin: 0 auto; /* Centre horizontalement */
+  margin-top: 15%;
+  color: #FAF5D8; /* Couleur du texte */
+}
+
+.contact-info,
+.contact-form {
+  flex: 1;
+  margin: 30px;
+}
+
+.contact-info h2,
+.contact-form h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  height: 50px;
+  width: 100px;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 1.25 rem;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #21181B;
+  color: #FAF5D8;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  align-self: flex-end; /* Aligne le bouton à droite */
+ 
+}
+
+.contact-form button:hover {
+  color: #21181B;
+  background-color: #FAF5D8;
+}
+
+
+
+/* Feuille parfum */
+
+.parfum_main-container {
+  height: calc(85vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+  gap: 150px;
+}
+
+.parfum-image {
+  width: 250px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.parfum-container {
+  text-align: left;
+}
+
+.parfum-title {
+  font-size: 2rem;
+  font-weight: 900;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+  border-bottom: 3px solid #FAF5D8; /* Définit le border */
+  
+}
+
+.parfum-subtitle {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.more-details-title a {
+  font-size: 16px;
+  color: #f4a71c;
+  text-decoration: none;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.more-details-title a:hover {
+  text-decoration: underline;
+}
+
+.btn-find-boutique {
+  background-color: #f4a71c;
+  color:#21181B;
+  padding: 20px 60px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0 auto;
+}
+
+.btn-find-boutique:hover {
+  background-color: #FAF5D8;
+  color: #21181B;
+}
+
+/* Popup styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-message {
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+.btn-close-popup {
+  background-color: #f4a71c;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-close-popup:hover {
+  background-color: #e09515;
+}
+
+
+
+/* Details section styles */
+.details-section {
+  background-color: #21181B;
+  color: #FAF5D8;
+  padding: 20px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.details-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Accordion styles */
+.accordion {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.accordion-item {
+  border-top: 1px solid #FAF5D8;
+}
+
+.accordion-header {
+  background: none;
+  border: none;
+  color: #FAF5D8;
+  font-size: 16px;
+  padding: 15px;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header:hover {
+  color: #F2AB36;
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px;
+  font-size: 14px;
+  background-color: #21181B;
+  color: #FAF5D8;
+}
+
+/* Arrow rotation */
+.accordion-header.active .arrow {
+  transform: rotate(180deg);
+}
+
+
+/* Responsive Design */
+
+/* Petits écrans (smartphones, jusqu'à 600px) */
+@media (max-width: 600px) {
+  .header nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .hero {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+  }
+  .parfum-home img {
+    height: 300px;
+    margin-right: 0;
+  }
+  .tagline h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 0;
+  }
+  .products {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .contact-box {
+    flex-direction: column;
+    height: auto;
+  }
+  .parfum_main-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .accordion {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* Tablettes (entre 600px et 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .header nav ul {
+    gap: 30px;
+  }
+  .products {
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .parfum_main-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+/* Grands écrans (à partir de 1200px) */
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
